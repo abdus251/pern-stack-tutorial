@@ -23,10 +23,11 @@ export const useProductStore = create((set, get) => ({
   //   set({
   //     formData,
   //   }),
-  setFormData: (newData) =>
+  setFormData: (updates) =>
     set((state) => ({
-      formData: { ...state.formData, ...newData },
+      formData: { ...state.formData, ...updates },
     })),
+  
   
     resetForm: () =>
       set(() => ({
