@@ -41,9 +41,7 @@ const AddProductModal = () => {
                   placeholder="Enter product name"
                   className="input input-bordered w-full pl-10 py-3 focus:input-primary transition-colors duration-200"
                   value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
+                  onChange={(e) => setFormData({ name: e.target.value })}
                 />
               </div>
             </div>
@@ -64,25 +62,8 @@ const AddProductModal = () => {
                   placeholder="0.00"
                   className="input input-bordered w-full pl-10 py-3 focus:input-primary transition-colors duration-200"
                   value={formData.price}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      price: parseFloat(e.target.value) || 0,
-                    })
-                  }
+                  onChange={(e) => setFormData({ price: e.target.value })}
                 />
-
-                {/* <input
-                    type="number"
-                    min="0"
-                    step="0.01"
-                    placeholder="0.00"
-                    className="input input-bordered w-full pl-10 py-3 focus:input-primary transition-colors duration-200"
-                    value={formData.price}
-                    onChange={(e) =>
-                      setFormData({ ...formData, price: e.target.value })
-                    }
-                  /> */}
               </div>
             </div>
 
@@ -102,9 +83,7 @@ const AddProductModal = () => {
                   placeholder="https://example.com/image.jpg"
                   className="input input-bordered w-full pl-10 py-3 focus:input-primary transition-colors duration-200"
                   value={formData.image}
-                  onChange={(e) =>
-                    setFormData({ ...formData, image: e.target.value })
-                  }
+                  onChange={(e) => setFormData({ image: e.target.value })} 
                 />
               </div>
             </div>
