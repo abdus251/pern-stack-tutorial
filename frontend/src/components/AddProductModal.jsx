@@ -40,7 +40,7 @@ const AddProductModal = () => {
                   type="text"
                   placeholder="Enter product name"
                   className="input input-bordered w-full pl-10 py-3 focus:input-primary transition-colors duration-200"
-                  value={formData.name}
+                  value={formData.name || ""}
                   onChange={(e) => setFormData({ name: e.target.value })}
                 />
               </div>
@@ -61,7 +61,7 @@ const AddProductModal = () => {
                   step="0.01"
                   placeholder="0.00"
                   className="input input-bordered w-full pl-10 py-3 focus:input-primary transition-colors duration-200"
-                  value={formData.price}
+                  value={formData.price || ""}
                   onChange={(e) => setFormData({ price: e.target.value })}
                 />
               </div>
@@ -82,8 +82,8 @@ const AddProductModal = () => {
                   type="text"
                   placeholder="https://example.com/image.jpg"
                   className="input input-bordered w-full pl-10 py-3 focus:input-primary transition-colors duration-200"
-                  value={formData.image}
-                  onChange={(e) => setFormData({ image: e.target.value })} 
+                  value={formData.image || ""}
+                  onChange={(e) => setFormData({ image: e.target.value })}
                 />
               </div>
             </div>
