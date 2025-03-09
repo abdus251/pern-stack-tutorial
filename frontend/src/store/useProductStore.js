@@ -19,11 +19,21 @@ export const useProductStore = create((set, get) => ({
     image: "",
   },
 
-  setFormData: (formData) =>
-    set({
-      formData,
-    }),
-  resetForm: () => set({ formData: { name: "", price: "", image: "" } }),
+  // setFormData: (formData) =>
+  //   set({
+  //     formData,
+  //   }),
+  setFormData: (newData) =>
+    set((state) => ({
+      formData: { ...state.formData, ...newData },
+    })),
+  
+    resetForm: () =>
+      set(() => ({
+        formData: { name: "", price: "", image: "" },
+      })),
+    
+  // resetForm: () => set({ formData: { name: "", price: "", image: "" } }),
 
   addProducts: async (e) => {
     e.preventDefault();
